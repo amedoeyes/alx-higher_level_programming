@@ -1,4 +1,7 @@
 #!/usr/bin/python3
 print(
-    "".join(chr(letter) for letter in range(97, 123) if chr(letter) not in "qe"), end=""
+    "{}".format(
+        ("".join(chr(c) for c in range(97, 123) if chr(c) not in "qe"))
+    ),
+    end="",
 )
