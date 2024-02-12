@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
-"""Sequare"""
-
+"""Sequare class"""
 
 from models.rectangle import Rectangle
 
@@ -15,14 +14,17 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """really... i don't even..."""
         return self.width
 
     @size.setter
     def size(self, value):
+        """really... i don't even..."""
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
+        """really... i don't even..."""
         if args:
             if len(args) > 0:
                 self.id = args[0]
@@ -37,6 +39,7 @@ class Square(Rectangle):
                 setattr(self, k, v)
 
     def to_dictionary(self):
+        """really... i don't even..."""
         return {
             "id": self.id,
             "size": self.size,
@@ -45,4 +48,5 @@ class Square(Rectangle):
         }
 
     def __str__(self):
+        """really... i don't even..."""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"

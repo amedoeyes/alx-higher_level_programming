@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Base"""
+"""Base class"""
 
 import json
 import csv
@@ -23,12 +23,14 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """really... i don't even..."""
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """really... i don't even..."""
         filename = cls.__name__ + ".json"
         with open(filename, "w") as f:
             if list_objs is None:
@@ -39,12 +41,14 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """really... i don't even..."""
         if json_string is None or json_string == "[]":
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
+        """really... i don't even..."""
         if cls.__name__ == "Rectangle":
             new = cls(1, 1)
         else:
@@ -54,6 +58,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """really... i don't even..."""
         filename = cls.__name__ + ".json"
         try:
             with open(filename, "r") as f:
@@ -64,6 +69,7 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
+        """really... i don't even..."""
         filename = cls.__name__ + ".csv"
         with open(filename, "w", newline="") as f:
             if list_objs is None or list_objs == []:
@@ -79,6 +85,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
+        """really... i don't even..."""
         filename = cls.__name__ + ".csv"
         try:
             with open(filename, "r", newline="") as f:
@@ -96,6 +103,7 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
+        """really... i don't even..."""
         turt = turtle.Turtle()
         turt.screen.bgcolor("#b7312c")
         turt.pensize(3)

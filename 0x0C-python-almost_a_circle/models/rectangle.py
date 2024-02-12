@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Rectangle"""
+"""Rectangle class"""
 
 from models.base import Base
 
@@ -19,10 +19,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """really... i don't even..."""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """really... i don't even..."""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -31,10 +33,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """really... i don't even..."""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """really... i don't even..."""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -43,10 +47,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """really... i don't even..."""
         return self.__x
 
     @x.setter
     def x(self, value):
+        """really... i don't even..."""
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -55,10 +61,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """really... i don't even..."""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """really... i don't even..."""
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -66,9 +74,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """really... i don't even..."""
         return self.width * self.height
 
     def display(self):
+        """really... i don't even..."""
         if self.width == 0 or self.height == 0:
             print()
             return
@@ -76,6 +86,7 @@ class Rectangle(Base):
         print("\n".join([" " * self.__x + "#" * self.__width] * self.__height))
 
     def update(self, *args, **kwargs):
+        """really... i don't even..."""
         if args:
             if len(args) > 0:
                 self.id = args[0]
@@ -92,6 +103,7 @@ class Rectangle(Base):
                 setattr(self, k, v)
 
     def to_dictionary(self):
+        """really... i don't even..."""
         return {
             "id": self.id,
             "width": self.width,
@@ -101,5 +113,7 @@ class Rectangle(Base):
         }
 
     def __str__(self):
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}\
-/{self.height}"
+        """really... i don't even..."""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height
+        )
